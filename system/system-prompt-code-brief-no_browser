@@ -98,9 +98,8 @@ export function total(xs:number[]){return xs.reduce((a,b)=>a+b,0)}
   <content>
 [full file content]
   </content>
-  <line_count>NN</line_count>
 </write_to_file>
-Create NEW files or FULL rewrites only. Provide COMPLETE content and accurate line_count. Tool auto-creates directories.
+Create NEW files or FULL rewrites only. Provide COMPLETE content. Tool auto-creates directories.
 
 Example:
 <write_to_file>
@@ -112,22 +111,7 @@ Example:
   "features": {"beta": true}
 }
   </content>
-  <line_count>6</line_count>
 </write_to_file>
-
-<insert_content>
-  <path>src/utils.ts</path>
-  <line>1</line>
-  <content>import {sum} from './math';</content>
-</insert_content>
-Insert lines without modifying existing ones. line=0 appends; positive inserts before that line. Ideal for imports, routes, logs.
-
-Example A:
-<insert_content>
-  <path>src/main.ts</path>
-  <line>1</line>
-  <content>import './polyfills';</content>
-</insert_content>
 
 <ask_followup_question>
   <question>Are you satisfied with this architecture?</question>
